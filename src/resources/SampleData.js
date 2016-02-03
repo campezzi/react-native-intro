@@ -2,115 +2,42 @@ const SampleData = {
 
   transactions: [
     {
-      title: "Australia Post",
-      amount: 65,
+      title: 'Australia Post',
+      amount: -250,
     },
     {
-      title: "Hardware Store",
-      amount: 500,
+      title: 'Telstra',
+      amount: -100,
     },
     {
-      title: "Apple Store",
-      amount: 6499.00,
+      title: 'Invoice #1456',
+      amount: 10000,
     },
     {
-      title: "Australia Post",
-      amount: 65,
+      title: 'Apple Store',
+      amount: -1199.99,
     },
     {
-      title: "Hardware Store",
-      amount: 500,
+      title: 'OfficeWorks',
+      amount: -39.49,
     },
     {
-      title: "Apple Store",
-      amount: 6499.00,
+      title: 'Dunder Mifflin',
+      amount: -7500.00,
     },
     {
-      title: "Australia Post",
-      amount: 65,
+      title: 'Interest',
+      amount: 237.28,
     },
     {
-      title: "Hardware Store",
-      amount: 500,
+      title: 'Invoice #1772',
+      amount: 2000.00,
     },
     {
-      title: "Apple Store",
-      amount: 6499.00,
-    },
-    {
-      title: "Australia Post",
-      amount: 65,
-    },
-    {
-      title: "Hardware Store",
-      amount: 500,
-    },
-    {
-      title: "Apple Store",
-      amount: 6499.00,
-    },
-    {
-      title: "Australia Post",
-      amount: 65,
-    },
-    {
-      title: "Hardware Store",
-      amount: 500,
-    },
-    {
-      title: "Apple Store",
-      amount: 6499.00,
-    },
-    {
-      title: "Australia Post",
-      amount: 65,
-    },
-    {
-      title: "Hardware Store",
-      amount: 500,
-    },
-    {
-      title: "Apple Store",
-      amount: 6499.00,
-    },
-    {
-      title: "Australia Post",
-      amount: 65,
-    },
-    {
-      title: "Hardware Store",
-      amount: 500,
-    },
-    {
-      title: "Apple Store",
-      amount: 6499.00,
-    },
-    {
-      title: "Australia Post",
-      amount: 65,
-    },
-    {
-      title: "Hardware Store",
-      amount: 500,
-    },
-    {
-      title: "Apple Store",
-      amount: 6499.00,
-    },
-    {
-      title: "Australia Post",
-      amount: 65,
-    },
-    {
-      title: "Hardware Store",
-      amount: 500,
-    },
-    {
-      title: "Apple Store",
-      amount: 6499.00,
+      title: 'Dell',
+      amount: -799.99,
     },
   ],
 
 };
-
 export default SampleData;
