@@ -1,5 +1,6 @@
 import React, {
   ListView,
+  RefreshControl,
 } from 'react-native';
 
 import SampleData from '../resources/SampleData';
@@ -13,12 +14,14 @@ class TransactionListScene extends React.Component {
 
     this._renderRow = this._renderRow.bind(this);
     this._presentTransaction = this._presentTransaction.bind(this);
+    this._refresh = this._refresh.bind(this);
 
     let ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2,
     });
     this.state = {
       dataSource: ds.cloneWithRows(SampleData.transactions),
+      refreshing: false,
     }
   }
 
@@ -27,6 +30,12 @@ class TransactionListScene extends React.Component {
       <ListView
         dataSource={this.state.dataSource}
         renderRow={this._renderRow}
+        refreshControl={
+          <RefreshControl
+            onRefresh={this._refresh}
+            refreshing={this.state.refreshing}
+          />
+        }
       />
     );
   }
@@ -45,6 +54,16 @@ class TransactionListScene extends React.Component {
     route.title = transaction.title;
     route.props = { transaction };
     this.props.navigator.push(route);
+  }
+
+  _refresh() {
+    this.setState({refreshing: true});
+    setTimeout(() => {
+      this.setState({
+        refreshing: false,
+        dataSource: this.state.dataSource.cloneWithRows(SampleData.refreshedTransactions),
+      });
+    }, 1000);
   }
 
 }

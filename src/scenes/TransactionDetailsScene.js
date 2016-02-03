@@ -11,7 +11,7 @@ class TransactionDetailsScene extends React.Component {
     return (
       <View style={styles.container}>
         <TransactionRow transaction={this.props.transaction} />
-        <Text style={styles.title}>More Details...</Text>
+        <Text style={styles.text}>More Details...</Text>
       </View>
     );
   }
@@ -25,11 +25,7 @@ TransactionDetailsScene.route = {
 export default TransactionDetailsScene;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'stretch',
-  },
-  title: {
+  text: {
     padding: 24,
   }
 });

@@ -12,8 +12,11 @@ import TransactionListScene from './scenes/TransactionListScene'
 
 export default class BrownBag extends Component {
 
-  render() {
+  componentDidMount() {
     this._setStatusBarStyle();
+  }
+
+  render() {
     return (
       <Navigator
         sceneStyle={styles.sceneContainer}
